@@ -9,7 +9,7 @@ function nowServing(katzDeliLine) {
     return "There is nobody waiting to be served!";
   }
   var firstPerson = katzDeliLine[0]; //store the first person before we remove them
-  katzDeliLine.splice(0, 1); //remove first index
+  katzDeliLine.splice(0, 1); //remove 1 person at index zero
   return "Currently serving " + firstPerson + ".";
 }
 
