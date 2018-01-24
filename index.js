@@ -1,15 +1,15 @@
 function takeANumber(katzDeliLine, newName) {
-  katzDeliLine.push(newName);
+  katzDeliLine.push(newName); //add new person to line
   var position = katzDeliLine.length;
   return "Welcome, " + newName + ". You are number " + position + " in line.";
 }
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
+  if (katzDeliLine.length === 0) { //firt checks if array/line is empty
     return "There is nobody waiting to be served!";
   }
-  var firstPerson = katzDeliLine[0];
-  katzDeliLine.splice(0, 1);
+  var firstPerson = katzDeliLine[0]; //store the first person before we remove them
+  katzDeliLine.splice(0, 1); //remove first index
   return "Currently serving " + firstPerson + ".";
 }
 
@@ -24,5 +24,6 @@ function currentLine(katzDeliLine) {
     var currPerson = katzDeliLine[i];
     currLine += currPostion + ". " + currPerson + ", ";
   }
-  return currLine.slice(0, currLine.length - 2);
+  return currLine.slice(0, currLine.length - 2); //the slice is to remove the extra comma and space
+  //could also use an if statement inside the for loop to check if youre at the last position
 }
