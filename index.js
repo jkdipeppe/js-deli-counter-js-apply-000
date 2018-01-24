@@ -12,8 +12,8 @@ function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) { //firt checks if array/line is empty
     return "There is nobody waiting to be served!";
   }
-  var firstPerson = katzDeliLine[0]; //store the first person before we remove them
-  katzDeliLine.splice(0, 1); //remove 1 person at index zero
+  var firstPerson = katzDeliLine[counter]; //store the first person before we remove them
+  counter++; //remove 1 person at index zero
   return "Currently serving " + firstPerson + ".";
 }
 
